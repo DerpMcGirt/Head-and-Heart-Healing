@@ -3,6 +3,13 @@ $secondary: rgba(179, 142, 193, 1);
 $blue: rgba(39, 35, 94, 1);
 $darkblue: rgba(30, 23, 75, 1);
 
+
+//========================hamburger menu start
+
+
+//=========================hamburger menu stop
+
+
 :root {
   background-image: url(../img/vector_landscape3.jpg);
 }
@@ -87,6 +94,10 @@ header {
   }
 }
 
+.icon {
+  display: none;
+}
+
 .hero {
   position: relative;
   height: 75vh;
@@ -109,6 +120,23 @@ hr {
   font-weight: 500;
   font-size: 1.2rem;
   background-color: rebeccapurple;
+}
+
+#logo {
+  min-width: 300px;
+  max-width: 300px;
+}
+
+#small_logo {
+  display: none;
+}
+
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-right: 2rem;
 }
 
 
@@ -148,9 +176,6 @@ hr {
   }
 }
 
-nav {
-  align-items: flex-end;
-}
 
 .spacer {
   height: 8rem;
@@ -160,25 +185,6 @@ nav {
   height: 4rem;
 }
 
-
-#specialties {
-  background-color: $darkblue;
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Oswald Text", sans-serif;
-    text-shadow: 2px 2px 5px black;
-  }
-
-  h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    padding-bottom: 3rem;
-  }
-
-  p {
-    text-shadow: 2px 2px 5px black;
-  }
-}
 
 .hhh-text {
   h1, h2, h3, h4, h5, h6 {
@@ -194,12 +200,70 @@ nav {
 
   p {
     text-shadow: 2px 2px 5px black;
+    color: white;
   }
 }
 
 
 //=======================BREAKPOINTS
-@media screen and (max-width: 500px) {
+@media (min-width: 1024px) {
+
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-right: 6rem;
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  #small_logo {
+    display: block;
+  }
+
+  #logo {
+    display: none;
+  }
+}
+
+
+li {
+  margin-left: 1rem;
+}
+
+a {
+  line-height: 0.5em;
+}
+
+
+.icon {
+  display: block;
+  float: right;
+}
+
+.fa-bars {
+  display: block;
+}
+
+
+.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+@media screen and (max-width: 600px) {
 
   :root {
     font-size: 1.2rem;
@@ -226,7 +290,7 @@ nav {
 
   header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     img {
       max-width: 50%;
@@ -256,11 +320,32 @@ nav {
     background-repeat: no-repeat;
   }
 
+
+  .icon {
+    display: block;
+    float: right;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #small_logo {
+    display: block;
+  }
+
+
+
   #more {
     h1 {
       margin-bottom: 3rem;
     }
   }
+
 
   .overlay-content {
     position: absolute;
@@ -281,22 +366,8 @@ nav {
       text-shadow: 1px 1px 0 $primary;
     }
   }
-
-  nav {
-    ul {
-      display: flex;
-      flex-direction: column;
-    }
-
-    li {
-      margin-left: 1rem;
-    }
-
-    a {
-      line-height: 0.5em;
-    }
-  }
 }
+
 
 .spacer-small {
   height: 2rem;
