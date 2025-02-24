@@ -4,14 +4,28 @@ $blue: rgba(39, 35, 94, 1);
 $darkblue: rgba(30, 23, 75, 1);
 
 
-//========================hamburger menu start
-
-
-//=========================hamburger menu stop
-
-
 :root {
   background-image: url(../img/vector_landscape3.jpg);
+}
+
+#about-denise {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+
+  h1, h2, h3, h4, h5, h6, p {
+    line-height: .95;
+  }
+}
+
+#about-denise-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding-left: 2rem;
+
 }
 
 #button-wrapper {
@@ -50,19 +64,66 @@ body, html {
   //align-content: center;
 }
 
+.card {
+  background-color: #4D439A;
+  width: 75%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 15px black;
+  text-shadow: 2px 2px 5px black;
+
+  h1 {
+    font-family: "Playfair Text", sans-serif;
+    padding-bottom: 1rem;
+  }
+
+  h3, h4, p {
+    font-family: "Patrick Text", sans-serif;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: .95;
+  }
+}
+
+.contrast {
+  border-top: 10px double #41439A;
+}
+
 .center {
   text-align: center;
 }
 
 #contact-form {
   text-shadow: 2px 2px 4px black;
-  outline: 4px $darkblue
+  outline: 4px $darkblue;
+
+  p {
+    font-family: Arial, sans-serif;
+  }
+
 }
 
 #denise-img {
   border-radius: 50%;
+  max-width: 427px;
+  max-height: 427px;
+  aspect-ratio: 1;
+
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 
 header {
   display: flex;
@@ -77,10 +138,11 @@ header {
     font: 2rem 'Marker Text';
   }
 
-  img {
+  #logo {
     max-height: 150px;
     margin: 1rem;
-    border: 10px dotted $primary;
+    border: 1rem dotted $primary;
+    border-radius: 1rem;
   }
 
   li {
@@ -127,7 +189,7 @@ hr {
   max-width: 300px;
 }
 
-#small_logo {
+#small-logo {
   display: none;
 }
 
@@ -137,6 +199,11 @@ nav {
   flex-direction: row;
   align-items: flex-end;
   margin-right: 2rem;
+
+  li {
+    padding: 0 1rem;
+    text-shadow: 2px 2px 4px black;
+  }
 }
 
 
@@ -167,13 +234,19 @@ nav {
   text-align: center;
 
   h1 {
-    font-family: "Oswald Text", sans-serif;
+    font-family: "Patrick Text", sans-serif;
     text-shadow: 2px 2px 5px black;
   }
 
   p {
     text-shadow: 2px 2px 5px black;
   }
+}
+
+
+#psychology-today-banner {
+  max-height: 185px;
+  border-radius: 1rem;
 }
 
 
@@ -186,34 +259,33 @@ nav {
 }
 
 
-.hhh-text {
-  h1, h2, h3, h4, h5, h6 {
+#specialty-box {
+  h3, p {
     font-family: "Oswald Text", sans-serif;
-    text-shadow: 2px 2px 5px black;
-  }
-
-  h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    padding-bottom: 3rem;
-  }
-
-  p {
-    text-shadow: 2px 2px 5px black;
-    color: white;
   }
 }
+
+//#testimonials {
+//  display: flex;
+//  flex-direction: row;
+//}
 
 
 //=======================BREAKPOINTS
 @media (min-width: 1024px) {
-
-
   nav {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     margin-right: 6rem;
+  }
+
+  #small-logo {
+    display: none;
+  }
+
+  #about-denise {
+    flex-direction: row;
   }
 }
 
@@ -227,41 +299,44 @@ nav {
   }
 
 
-  #small_logo {
+  #small-logo {
     display: block;
+    min-width: 75px;
+    max-width: 75px;
+    border: 10px dotted $primary;
+    border-radius: 1rem;
   }
 
   #logo {
     display: none;
   }
+
+
+  li {
+    margin-left: 1rem;
+  }
+
+  a {
+    line-height: 0.5em;
+  }
+
+
+  .icon {
+    display: block;
+    float: right;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+
+
+  .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
-
-
-li {
-  margin-left: 1rem;
-}
-
-a {
-  line-height: 0.5em;
-}
-
-
-.icon {
-  display: block;
-  float: right;
-}
-
-.fa-bars {
-  display: block;
-}
-
-
-.icon {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
 
 @media screen and (max-width: 600px) {
 
@@ -291,10 +366,6 @@ a {
   header {
     display: flex;
     flex-direction: row;
-
-    img {
-      max-width: 50%;
-    }
   }
 
   h1 {
@@ -334,11 +405,9 @@ a {
     display: none;
   }
 
-  #small_logo {
+  #small-logo {
     display: block;
   }
-
-
 
   #more {
     h1 {
@@ -346,6 +415,9 @@ a {
     }
   }
 
+  nav {
+    display: none;
+  }
 
   .overlay-content {
     position: absolute;
@@ -371,6 +443,10 @@ a {
 
 .spacer-small {
   height: 2rem;
+}
+
+#testimonials {
+  flex-direction: column;
 }
 
 

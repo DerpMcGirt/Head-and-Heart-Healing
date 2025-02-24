@@ -4,15 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "EUcd1R9rkCW5IV4Bz",
+            });
+        })();
+    </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <link rel="stylesheet" href="assets/css/hhh.css">
-    <title>Contact Us! - Head & Heart Health, PLLC.</title>
+    <title>Contact Us! - Head & Heart Healing, PLLC.</title>
 </head>
 <body>
 <main>
     <header id="header">
-        <img src="assets/img/hhh_logo.jpeg" alt="logo" style="min-width:150px"/>
-        <img src="assets/img/hhh_heart_logo.jpg" alt="small logo" id="small_logo"/>
+        <img src="assets/img/hhh_logo.jpeg" alt="logo" id="logo"/>
+        <img src="assets/img/hhh_heart_logo.jpg" alt="small-logo" id="small-logo"/>
         <nav>
             <ul>
                 <li><a href="about.html">About</a></li>
@@ -30,19 +39,20 @@
 
     <div class="spacer-small"></div>
 
-    <div class="container hhh-text" id="contact-form">
+    <div class="container card" id="contact-form">
 
 
-        <h1 class="center">Reach out to us!</h1>
+        <h1 class="center">Leave us a message!</h1>
 
         <p>
-            Want to share a comment or a question? Just fill out the form below and press submit!
-            Please note: A valid return email address is required.
+            Want to share a comment? Just have a question? Please feel free to fill out the form below and submit!
         </p>
+
+        <h6>NOTE: A valid return email address is required</h6>
 
         <div class="spacer-small"></div>
 
-        <form>
+        <form id="contactForm">
             <fieldset>
                 <label>
                     Your Name
@@ -50,6 +60,7 @@
                             name="first_name"
                             placeholder="First name"
                             autocomplete="given-name"
+                            required
                     />
                 </label>
                 <label>
@@ -59,6 +70,7 @@
                             name="email"
                             placeholder="Email"
                             autocomplete="email"
+                            required
                     />
                 </label>
                 <label>
@@ -67,21 +79,50 @@
                             name="message"
                             placeholder="Your message"
                             aria-label="Message or inquiry"
+                            required
                     ></textarea>
-
                 </label>
             </fieldset>
-
-            <input
-                    type="submit"
-                    value="Send Message"
-            />
+            <input type="submit" value="Send Message"/>
         </form>
     </div>
 
 </main>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Validate form fields
+        const firstName = document.querySelector('input[name="first_name"]').value;
+        const email = document.querySelector('input[name="email"]').value;
+        const message = document.querySelector('textarea[name="message"]').value;
+
+        if (!firstName || !email || !message) {
+            alert('Please ensure all fields are populated correctly before submitting!.');
+            return;
+        }
+
+        // Send the form data using EmailJS
+        emailjs.send('service_i09rknm',
+            'template_afqnb46',
+            {
+                first_name: firstName,
+                email: email,
+                message: message
+            },
+            this
+        )
+            .then(function (response) {
+                alert('Message sent successfully!');
+            }, function (error) {
+                alert('Failed to send message. Please try again later.');
+            });
+    });
+</script>
+
 </body>
 <footer id="footer">
-    <span>&copy 2025 Head & Heart Health PLLC.</span>
+    <span>&copy 2025 Head & Heart Healing PLLC.</span>
 </footer>
 </html>
