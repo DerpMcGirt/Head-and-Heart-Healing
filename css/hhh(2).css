@@ -1,0 +1,79 @@
+#img-card {
+  display: inline-flex;
+  background-image: radial-gradient(circle at center, #8b26f1, rgb(66, 24, 110));
+  justify-content: space-between;
+  align-items: center;
+  outline: 1rem solid #8b26f1;
+  margin: 0;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+#img-card img {
+  width: 60%;
+  outline: 6px solid white;
+}
+#img-card p {
+  width: 100vw;
+  height: 45vh;
+  margin-top: 0;
+  padding: 0;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  text-align: start;
+  justify-content: left;
+  align-items: center;
+}
+
+.info-card {
+  background-image: radial-gradient(circle at center, #8b26f1, rgb(66, 24, 110));
+  padding: 1rem;
+  border-radius: 1rem;
+  outline: 5px solid rebeccapurple;
+}
+
+#index-hero {
+  background-image: url(../img/clouds.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  padding-bottom: 1em;
+}
+#index-hero h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 20px;
+}
+#index-hero p {
+  color: white;
+  text-align: center;
+  background-image: radial-gradient(circle at center, #8b26f1, rgb(66, 24, 110));
+  margin-top: 120px;
+  padding: 1rem;
+  border-radius: 1rem;
+  outline: 5px solid rebeccapurple;
+  max-width: 90%;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+  font-size: 1.54em;
+}
+nav a {
+  color: #8b26f1;
+  text-decoration: none;
+}
+nav li {
+  transition: transform 0.4s ease-in-out;
+}
+nav li:hover {
+  color: #8b26f1;
+  transform: scale(1.2);
+}
+
+/*# sourceMappingURL=hhh.css.map */
