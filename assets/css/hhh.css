@@ -20,29 +20,23 @@
 }
 
 #button-wrapper a {
-  color: white;
+  color: #f07a60;
   text-decoration: none;
 }
 
 #call-button {
-  background-color: rgb(143, 7, 255);
-  border: 2px solid rgb(179, 142, 193);
+  font-family: "Amatic Text", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  background-color: rgb(39, 35, 94);
+  border: 3px solid #f07a60;
 }
 
 #read-button {
-  border: 2px solid rgb(179, 142, 193);
-}
-
-#greeting {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 2rem;
-  border-radius: 50px;
-  box-shadow: -2px 2px 15px darkorchid;
-  background-color: #f4eafc;
+  font-family: "Amatic Text", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  border: 3px solid #f07a60;
 }
 
 body, html {
@@ -53,13 +47,15 @@ body, html {
 }
 
 .card {
-  background-color: #4D439A;
+  background-image: radial-gradient(circle, #27235e, #2a1b56, #2d134d, #2e0944, #2e003b);
   width: 75%;
-  margin: 1rem auto;
-  padding: 1rem;
+  min-width: 400px;
+  margin: auto auto;
+  padding: 3rem;
   border-radius: 1rem;
   box-shadow: 2px 2px 15px black;
   text-shadow: 2px 2px 5px black;
+  border: 15px solid #f07a60;
 }
 .card h1 {
   font-family: "Playfair Text", sans-serif;
@@ -85,15 +81,15 @@ body, html {
   text-shadow: 2px 2px 4px black;
   outline: 4px rgb(30, 23, 75);
 }
-#contact-form p {
-  font-family: Arial, sans-serif;
-}
 
 #denise-img {
   border-radius: 50%;
   max-width: 427px;
   max-height: 427px;
   aspect-ratio: 1;
+  margin-bottom: 3rem;
+  border: 25px solid #f07a60;
+  outline: 55px dashed #f07a60;
 }
 
 .flex-column {
@@ -107,6 +103,25 @@ body, html {
   justify-content: space-evenly;
 }
 
+#footer {
+  font-family: "playfair Text", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  background-color: rebeccapurple;
+}
+
+#greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  border-radius: 50px;
+  box-shadow: -2px 2px 15px darkorchid;
+  background-color: #f4eafc;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -116,13 +131,7 @@ header a {
   color: white;
   text-decoration: none;
   -webkit-text-stroke: 2px black;
-  font: 2rem "Marker Text";
-}
-header #logo {
-  max-height: 150px;
-  margin: 1rem;
-  border: 1rem dotted rgb(143, 7, 255);
-  border-radius: 1rem;
+  font: 3rem "Changa Text";
 }
 header li {
   transition: transform 0.2s ease-in-out;
@@ -130,10 +139,6 @@ header li {
 }
 header li:hover {
   transform: scale(1.2);
-}
-
-.icon {
-  display: none;
 }
 
 .hero {
@@ -153,20 +158,44 @@ hr {
   border-top: 10px double rgb(39, 35, 94);
 }
 
-#footer {
-  font-family: "playfair Text", sans-serif;
-  font-weight: 500;
-  font-size: 1.2rem;
-  background-color: rebeccapurple;
+.hr-contrast {
+  border-top: 5px solid #f07a60;
+}
+
+.icon {
+  display: none;
+}
+
+.indented {
+  padding-left: 2rem;
 }
 
 #logo {
+  display: block;
+  max-height: 150px;
   min-width: 300px;
   max-width: 300px;
+  margin: 1rem;
+  border-radius: 1rem;
 }
 
-#small-logo {
-  display: none;
+#location-area {
+  display: flex;
+  flex-direction: column;
+}
+#location-area img {
+  object-fit: none;
+  aspect-ratio: 1/1;
+  scale: 1.25;
+  border-radius: 1rem;
+  max-width: 600px;
+}
+
+#map-wrapper {
+  margin: 2rem auto;
+}
+#map-wrapper h4 {
+  font-family: "Poppins Text", sans-serif;
 }
 
 nav {
@@ -200,20 +229,15 @@ nav li {
   font-weight: 900;
 }
 
-#more {
-  text-align: center;
-}
-#more h1 {
-  font-family: "Patrick Text", sans-serif;
-  text-shadow: 2px 2px 5px black;
-}
-#more p {
-  text-shadow: 2px 2px 5px black;
-}
-
-#psychology-today-banner {
+.banner {
   max-height: 185px;
   border-radius: 1rem;
+  margin-bottom: 1rem;
+  min-width: 350px;
+}
+
+#small-logo {
+  display: none;
 }
 
 .spacer {
@@ -224,25 +248,29 @@ nav li {
   height: 4rem;
 }
 
-#specialty-box h3, #specialty-box p {
-  font-family: "Oswald Text", sans-serif;
+ul li {
+  list-style-type: circle;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
+  #about-denise {
+    flex-direction: row;
+    outline: 0;
+  }
   nav {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     margin-right: 6rem;
   }
-  #small-logo {
-    display: none;
-  }
-  #about-denise {
-    flex-direction: row;
-  }
 }
 @media (max-width: 800px) {
+  a {
+    line-height: 0.5em;
+  }
+  .fa-bars {
+    display: block;
+  }
   header {
     display: flex;
     flex-direction: row;
@@ -250,45 +278,26 @@ nav li {
     align-items: center;
     text-align: center;
   }
-  #small-logo {
-    display: block;
-    min-width: 75px;
-    max-width: 75px;
-    border: 10px dotted rgb(143, 7, 255);
-    border-radius: 1rem;
-  }
   #logo {
     display: none;
   }
   li {
     margin-left: 1rem;
   }
-  a {
-    line-height: 0.5em;
-  }
-  .icon {
+  #small-logo {
     display: block;
-    float: right;
-  }
-  .fa-bars {
-    display: block;
-  }
-  .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+    min-width: 75px;
+    max-width: 75px;
+    border-radius: 1rem;
+    margin: 0 1em;
   }
 }
 @media screen and (max-width: 600px) {
   :root {
     font-size: 1.2rem;
   }
-  hr {
-    width: 95%;
-  }
-  #index-hero {
-    width: 100%;
-    display: none;
+  .fa-bars {
+    display: block;
   }
   #greeting {
     display: flex;
@@ -297,10 +306,6 @@ nav li {
     align-items: center;
     text-align: center;
     margin-top: 2rem;
-  }
-  header {
-    display: flex;
-    flex-direction: row;
   }
   h1 {
     margin: 20px 0;
@@ -313,6 +318,10 @@ nav li {
     border-top: 6px solid #ffffff; /* Style the line */
     transform: translateY(-50%);
   }
+  header {
+    display: flex;
+    flex-direction: row;
+  }
   .hero {
     position: relative;
     height: 100vh;
@@ -322,18 +331,16 @@ nav li {
     background-position: center;
     background-repeat: no-repeat;
   }
+  hr {
+    width: 95%;
+  }
   .icon {
     display: block;
     float: right;
   }
-  .fa-bars {
-    display: block;
-  }
-  #logo {
+  #index-hero {
+    width: 100%;
     display: none;
-  }
-  #small-logo {
-    display: block;
   }
   #more h1 {
     margin-bottom: 3rem;
@@ -358,15 +365,13 @@ nav li {
     font: 1rem "Merienda Text";
     text-shadow: 1px 1px 0 rgb(143, 7, 255);
   }
+  .spacer-small {
+    height: 2rem;
+  }
+  #testimonials {
+    flex-direction: column;
+  }
 }
-.spacer-small {
-  height: 2rem;
-}
-
-#testimonials {
-  flex-direction: column;
-}
-
 @font-face {
   font-family: "Oswald Text";
   src: url("../fonts/Oswald-VariableFont_wght.ttf");
@@ -385,12 +390,6 @@ nav li {
   font-style: normal;
 }
 @font-face {
-  font-family: "Flower Text";
-  src: url("../fonts/IndieFlower-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "Merienda Text";
   src: url("../fonts/Merienda-VariableFont_wght.ttf");
   font-weight: normal;
@@ -399,12 +398,6 @@ nav li {
 @font-face {
   font-family: "Patrick Text";
   src: url("../fonts/PatrickHandSC-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Marker Text";
-  src: url("../fonts/PermanentMarker-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -421,20 +414,32 @@ nav li {
   font-style: normal;
 }
 @font-face {
-  font-family: "Ranchers Text";
-  src: url("../fonts/Ranchers-Regular.ttf");
+  font-family: "Cantora Text";
+  src: url("../fonts/CantoraOne-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Rancho Text";
-  src: url("../fonts/Rancho-Regular.ttf");
+  font-family: "Changa Text";
+  src: url("../fonts/ChangaOne-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Schoolbell Text";
-  src: url("../fonts/Schoolbell-Regular.ttf");
+  font-family: "Coustard Text";
+  src: url("../fonts/Coustard-Black.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lilita Text";
+  src: url("../fonts/LilitaOne-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Wendy Text";
+  src: url("../fonts/WendyOne-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }

@@ -1,3 +1,11 @@
+Blue Host login details
+headandhearthealingpllc.com
+PsychWellness<3
+
+derpmcgirt
+SkLC)SVamRJKYTjAWmkEjL(@
+
+
 About Head & Heart Health
 
 At Head & Heart Health, we bring a wealth of life experience to our practice, understanding the complexities of relationships and personal growth. Our team has navigated various personal challenges, including marriage, parenting, divorce, and blended families, and we value genuine conversations that build trust and therapeutic relationships.
@@ -45,7 +53,8 @@ No problem! We can take cash in-office or credit card payments in the patient po
 
 
 
-================= INDEX
+================= COPY OF INDEX
+================= Keep this boilerplate intact!  It makes for quick iterations of an acceptable base page to toy with.
 
 <!doctype html>
 <html lang="en">
@@ -91,3 +100,13 @@ No problem! We can take cash in-office or credit card payments in the patient po
     <span>&copy 2025 Head & Heart Health PLLC.</span>
 </footer>
 </html>
+
+============== END OF INDEX COPY
+
+
+
+============== Need to come up with something to put next to location image that doesn't sound corny or like AI wrote it.
+
+Our brand new and modern office space features high ceilings and open common areas, and is the perfect safe-space for you to  
+
+helps encourage free and unrestrained thought process

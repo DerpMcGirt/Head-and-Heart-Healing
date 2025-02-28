@@ -12,8 +12,10 @@
 
 <main>
     <header id="header">
-        <img src="assets/img/hhh_logo.jpeg" alt="logo" id="logo"/>
-        <img src="assets/img/hhh_heart_logo.jpg" alt="small-logo" id="small-logo"/>
+        <div id="logo-wrapper">
+            <img src="assets/img/hhh_logo.jpeg" alt="logo" id="logo"/>
+            <img src="assets/img/hhh_heart_logo.jpg" alt="small-logo" id="small-logo"/>
+        </div>
         <nav>
             <ul>
                 <li><a href="about.html">About</a></li>
@@ -33,8 +35,8 @@
     <div class="spacer-small"></div>
 
 
-    <div class="container card center">
-        <h1>Welcome to Head & Heart Healing</h1>
+    <div class="container card center" id="more-about">
+        <h1>Welcome to Head & Heart Healing!</h1>
         <p>
             At Head & Heart Healing, we bring a wealth of life experience to our practice, understanding the
             complexities of relationships and personal growth. Our team has navigated various personal challenges,
@@ -56,9 +58,6 @@
         </p>
     </div>
 
-    <div class="spacer-small"></div>
-
-    <hr class="contrast">
 
     <div class="spacer-small"></div>
 
@@ -66,15 +65,15 @@
     <div class="container card" id="about-denise">
         <img src="assets/img/denise_profile.jpg" alt="Therapist Denise Myers" id="denise-img"/>
         <div id="about-denise-content">
-            <h1>Meet Denise!</h1>
-            <h3>Founder of Head & Heart Healing</h3>
-            <h6>Licensed Clinical Mental Health Counselor/Licensed Professional Clinical Counselor</h6>
+            <h1 class="indented">Meet Denise!</h1>
+            <h3 class="indented">Founder of Head & Heart Healing, PLLC.</h3>
 
-            <div class="spacer-small"></div>
 
-            <h3>License Information:</h3>
-            <h5>North Carolina LCMHC - <strong>#20097</strong></h5>
-            <h5>Kentucky LPCC - <strong>#286562</strong></h5>
+            <h3 class="indented">License Information:</h3>
+            <h5 class="indented"><strong>North Carolina LCMHC - #20097</strong></h5>
+            <h6 class="indented" style="margin-left: 1em;">Licensed Clinical Mental Health Counselor</h6>
+            <h5 class="indented"><strong>Kentucky LPCC - #286562</strong></h5>
+            <h6 class="indented" style="margin-left: 25px;">Licensed Professional Clinical Counselor</h6>
 
             <div class="spacer-small"></div>
 
@@ -83,9 +82,34 @@
                 Mental Health Counselors</a></h6>
             <h6><a href="https://oop.ky.gov/">Kentucky Department of Professional Licensing</a></h6>
 
-            <img src="assets/img/psychology_today.jpg" alt="Psychology Today Banner" id="psychology-today-banner" />
+            <a href="https://www.psychologytoday.com/us/therapists/denise-r-myers-greensboro-nc/905779">
+                <img src="assets/img/psychology_today_min.jpg" alt="Psychology Today Banner" class="banner"/>
+            </a>
+
+            <img src="assets/img/aca.jpg" alt="American Counseling Association Banner" class="banner"/>
         </div>
     </div>
+
+
+    <div class="spacer-small"></div>
+
+    <div class="container card">
+        <h1 class="center">Location Location Location</h1>
+        <div class="flex-column" id="location-area">
+
+
+            <img src="assets/img/venture_x_building.jpg" alt="Office building exterior"/>
+            <img src="assets/img/venture_x_interior.jpg" alt="Office building interior"/>
+            <div class="flex-row">
+            <img src="assets/img/hhh_on_maps.jpg" alt="Map showing business location"/>
+            <h4>701 Green Valley Rd #100, Greensboro, NC 27408</h4>
+            </div>
+
+
+        </div>
+
+    </div>
+
 
     <div class="spacer-small"></div>
 
