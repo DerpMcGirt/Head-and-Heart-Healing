@@ -3,10 +3,22 @@ $secondary: rgba(179, 142, 193, 1);
 $blue: rgba(39, 35, 94, 1);
 $darkblue: rgba(30, 23, 75, 1);
 $orange: #f07a60;
+$bgblue: #1E174B;
 
 :root {
   background-image: url(../img/vector_landscape3.jpg);
+  background-color: $bgblue;
 }
+
+a {
+  transition: transform .2s ease-in-out;
+  font-size: 1rem;
+}
+
+a:hover {
+  transform: scale(1.2);
+}
+
 
 #about-denise {
   display: flex;
@@ -26,6 +38,15 @@ $orange: #f07a60;
   align-items: start;
   padding-left: 2rem;
 }
+
+
+.banner {
+  max-height: 185px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  min-width: 350px;
+}
+
 
 #button-wrapper {
   a {
@@ -97,17 +118,6 @@ body, html {
 }
 
 
-#contact-form {
-  text-shadow: 2px 2px 4px black;
-  outline: 4px $darkblue;
-
-  //p {
-  //  font-family: Arial, sans-serif;
-  //}
-
-}
-
-
 #denise-img {
   border-radius: 50%;
   max-width: 427px;
@@ -129,6 +139,7 @@ body, html {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin: 3rem 0;
 }
 
 
@@ -208,6 +219,16 @@ hr {
   padding-left: 2rem;
 }
 
+input:focus {
+  outline: 2px solid $orange; /* Change #ff6347 to your desired color */
+  outline-offset: 5px; /* Optional: Adjust the distance of the outline from the element */
+}
+
+textarea:focus {
+  outline: 2px solid $orange; /* Change #ff6347 to your desired color */
+  outline-offset: 5px; /* Optional: Adjust the distance of the outline from the element */
+}
+
 #logo {
   display: block; // default to visible
   max-height: 150px;
@@ -218,17 +239,31 @@ hr {
   border-radius: 1rem;
 }
 
-#location-area {
-  display: flex;
-  flex-direction: column;
+
+.location {
+  outline: 10px solid $orange;
+  border-radius: 1rem;
+  justify-content: space-between;
+
 
   img {
     object-fit: none;
-    aspect-ratio: 1/1;
-    scale: 1.25;
-    border-radius: 1rem;
     max-width: 600px;
   }
+
+  h4 {
+    font-size: 1.5rem;
+    padding: 2rem;
+  }
+}
+
+#location-area {
+  align-items: center;
+}
+
+#map {
+  outline: 15px solid $orange;
+  border-radius: 1rem;
 }
 
 #map-wrapper {
@@ -259,6 +294,7 @@ nav {
   transform: translate(-50%, -50%);
   text-align: center;
 
+
   h1 {
     font: 4rem 'playfair text';
     color: white;
@@ -274,14 +310,16 @@ nav {
   }
 }
 
-
-.banner {
-  max-height: 185px;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  min-width: 350px;
+#physical-address {
+  text-decoration: none;
+  color: $orange;
+  transition: transform .2s ease-in-out;
+  font-size: 2rem;
 }
 
+#physical-address:hover {
+  transform: scale(1.2);
+}
 
 #small-logo {
   display: none; // default to hidden
@@ -296,6 +334,9 @@ nav {
   height: 4rem;
 }
 
+#testimonials {
+  background-color: black;
+}
 
 ul {
   li {
