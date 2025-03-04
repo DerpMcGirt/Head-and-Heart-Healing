@@ -27,7 +27,7 @@ a:hover {
 
 
   h1, h2, h3, h4, h5, h6, p {
-    line-height: .95;
+    line-height: 0.95;
   }
 }
 
@@ -61,6 +61,10 @@ a:hover {
   font-weight: 700;
   background-color: $blue;
   border: 3px solid $orange;
+}
+
+cite {
+  color: $orange;
 }
 
 #read-button {
@@ -169,7 +173,6 @@ header {
   flex-direction: row;
   justify-content: space-between;
 
-
   a {
     color: white;
     text-decoration: none;
@@ -177,16 +180,23 @@ header {
     font: 3rem "Changa Text";
   }
 
-
   li {
     transition: transform .2s ease-in-out;
     font-size: 1rem;
   }
 
   li:hover {
-
     transform: scale(1.2);
   }
+}
+
+a {
+  transition: transform .2s ease-in-out;
+  text-decoration: none;
+}
+
+a:hover {
+  transform: scale(1.2);
 }
 
 
@@ -264,6 +274,9 @@ textarea:focus {
 #map {
   outline: 15px solid $orange;
   border-radius: 1rem;
+  width: 600px;
+  min-width: 400px;
+  max-width: 800px;
 }
 
 #map-wrapper {
