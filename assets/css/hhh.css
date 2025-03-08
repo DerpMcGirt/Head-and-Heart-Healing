@@ -200,6 +200,10 @@ hr {
   padding-left: 2rem;
 }
 
+.indented-li {
+  margin-left: 3em;
+}
+
 input:focus {
   outline: 2px solid #f07a60; /* Change #ff6347 to your desired color */
   outline-offset: 5px; /* Optional: Adjust the distance of the outline from the element */
