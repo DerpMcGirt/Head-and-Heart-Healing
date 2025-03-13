@@ -143,19 +143,13 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 0.75em;
 }
 header a {
   color: white;
   text-decoration: none;
   -webkit-text-stroke: 2px black;
-  font: 3rem "Changa Text";
-}
-header li {
-  transition: transform 0.2s ease-in-out;
-  font-size: 1rem;
-}
-header li:hover {
-  transform: scale(1.2);
+  font: 2.75rem "Changa Text";
 }
 
 a {
@@ -223,6 +217,14 @@ textarea:focus {
   border-radius: 1rem;
 }
 
+#logo-wrapper {
+  transition: transform 0.2s ease-in-out;
+}
+
+#logo-wrapper:hover {
+  transform: scale(1.2);
+}
+
 .location {
   outline: 10px solid #f07a60;
   border-radius: 1rem;
@@ -260,10 +262,11 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  justify-content: end;
   margin-right: 2rem;
 }
 nav li {
-  padding: 0 1rem;
+  padding: 0 1em;
   text-shadow: 2px 2px 4px black;
 }
 
@@ -288,6 +291,7 @@ nav li {
 }
 
 #physical-address {
+  display: block;
   text-decoration: none;
   color: #f07a60;
   transition: transform 0.2s ease-in-out;
@@ -295,7 +299,7 @@ nav li {
 }
 
 #physical-address:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #small-logo {
@@ -355,7 +359,7 @@ ul li {
     min-width: 75px;
     max-width: 75px;
     border-radius: 1rem;
-    margin: 0 1em;
+    margin: 1em;
   }
 }
 @media screen and (max-width: 600px) {
@@ -396,6 +400,7 @@ ul li {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-top: 2em;
   }
   hr {
     width: 95%;

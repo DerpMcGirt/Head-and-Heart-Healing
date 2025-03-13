@@ -172,22 +172,16 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 0.75em;
 
   a {
     color: white;
     text-decoration: none;
     -webkit-text-stroke: 2px black;
-    font: 3rem "Changa Text";
+    font: 2.75rem "Changa Text";
   }
 
-  li {
-    transition: transform .2s ease-in-out;
-    font-size: 1rem;
-  }
 
-  li:hover {
-    transform: scale(1.2);
-  }
 }
 
 a {
@@ -252,10 +246,16 @@ textarea:focus {
   min-width: 300px;
   max-width: 300px;
   margin: 1rem;
-  //border: 1rem dotted $primary;
   border-radius: 1rem;
 }
 
+#logo-wrapper {
+  transition: transform .2s ease-in-out;
+}
+
+#logo-wrapper:hover {
+  transform: scale(1.2);
+}
 
 .location {
   outline: 10px solid $orange;
@@ -298,10 +298,11 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  justify-content: end;
   margin-right: 2rem;
 
   li {
-    padding: 0 1rem;
+    padding: 0 1em;
     text-shadow: 2px 2px 4px black;
   }
 }
@@ -331,6 +332,7 @@ nav {
 }
 
 #physical-address {
+  display: block;
   text-decoration: none;
   color: $orange;
   transition: transform .2s ease-in-out;
@@ -338,7 +340,7 @@ nav {
 }
 
 #physical-address:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #small-logo {
@@ -416,7 +418,7 @@ ul {
     max-width: 75px;
     //border: 10px dotted $primary;
     border-radius: 1rem;
-    margin: 0 1em;
+    margin: 1em;
   }
 }
 
@@ -466,6 +468,7 @@ ul {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-top: 2em;
   }
 
   hr {

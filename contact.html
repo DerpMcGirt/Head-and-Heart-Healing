@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
-<!--    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>-->
-    <link rel="stylesheet" href="assets/css/pico-copy.css" />
+    <!--    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>-->
+    <link rel="stylesheet" href="assets/css/pico-copy.css"/>
     <script type="text/javascript">
         (function () {
             // https://dashboard.emailjs.com/admin/account
@@ -21,11 +21,15 @@
 <body>
 <main>
     <header id="header">
-        <img src="assets/img/hhh_logo.jpeg" alt="logo" id="logo"/>
-        <img src="assets/img/hhh_heart_logo.jpg" alt="small-logo" id="small-logo"/>
+        <div id="logo-wrapper">
+            <a href="index.html"><img src="assets/img/hhh_logo.jpeg" alt="logo" id="logo"/></a>
+            <a href="index.html"><img src="assets/img/hhh_heart_logo.jpg" alt="small-logo" id="small-logo"/></a>
+        </div>
+
         <nav>
             <ul>
                 <li><a href="about.html">About</a></li>
+                <li class="center"><a href="denise.html">Meet<br>Denise</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="faq.html">FAQ</a></li>
@@ -48,7 +52,6 @@
         <p>
             Want to share a comment? Just have a question? Please feel free to fill out the form below and submit!
         </p>
-
 
 
         <h6>NOTE: A valid return email address is required</h6>
