@@ -20,18 +20,18 @@ a:hover {
 }
 
 
-#about-denise {
+#meet-denise {
   display: flex;
   flex-direction: column;
   justify-content: start;
 
 
   h1, h2, h3, h4, h5, h6, p {
-    line-height: 0.95;
+    line-height: 1.5;
   }
 }
 
-#about-denise-content {
+#meet-denise-content {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -49,6 +49,8 @@ a:hover {
 
 
 #button-wrapper {
+  margin-top: 2em;
+
   a {
     color: $orange;
     text-decoration: none;
@@ -59,8 +61,17 @@ a:hover {
   font-family: "Amatic Text", sans-serif;
   font-size: 1.7rem;
   font-weight: 700;
-  background-color: $blue;
+  background-color: #B38EC1;
   border: 3px solid $orange;
+
+  a {
+    font-size: 1.7rem;
+    color: black;
+  }
+}
+
+#call-button:hover {
+  background-color: #cda5dc;
 }
 
 cite {
@@ -72,6 +83,10 @@ cite {
   font-size: 1.7rem;
   font-weight: 700;
   border: 3px solid $orange;
+
+  a {
+    font-size: 1.7rem;
+  }
 }
 
 
@@ -195,6 +210,7 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6, p {
   color: white;
+  margin-bottom: 0;
 }
 
 .hero {
@@ -265,7 +281,7 @@ textarea:focus {
 
   img {
     object-fit: none;
-    max-width: 600px;
+    max-width: 800px;
   }
 
   h4 {
@@ -307,6 +323,15 @@ nav {
   }
 }
 
+#nav-call-button {
+  a {
+    font-family: "Amatic Text", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    background-color: orange;
+    border: 3px solid $orange;
+  }
+}
 
 .overlay-content {
   position: absolute;
@@ -343,6 +368,12 @@ nav {
   transform: scale(1.1);
 }
 
+.shake {
+  animation: shaking .25s;
+  animation-delay: 5s;
+}
+
+
 #small-logo {
   display: none; // default to hidden
 }
@@ -358,6 +389,9 @@ nav {
 
 #testimonials {
   background-color: black;
+  border-radius: 1rem;
+  padding: 1rem;
+  outline: 30px double black;
 }
 
 ul {
@@ -367,11 +401,29 @@ ul {
 }
 
 
+@keyframes shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 //=======================BREAKPOINTS
 
 
 @media (min-width: 1000px) {
-  #about-denise {
+  #meet-denise {
     flex-direction: row;
     outline: 0;
   }

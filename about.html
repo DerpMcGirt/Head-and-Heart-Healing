@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">-->
-    <link rel="stylesheet" href="assets/css/pico-copy.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+<!--    <link rel="stylesheet" href="assets/css/pico-copy.css"/>-->
     <link rel="stylesheet" href="assets/css/hhh.css">
     <link rel="stylesheet" href="assets/css/slideshow.css">
     <title>About Us - Head & Heart Healing, PLLC.</title>
@@ -27,7 +27,7 @@
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li>
-                    <button class="primary">Call Now!</button>
+                    <button class="primary" id="nav-call-button"><a href="tel:+8593409410">Call Now!</a></button>
                 </li>
             </ul>
         </nav>
@@ -39,7 +39,11 @@
 
 
     <div class="container card center" id="more-about">
-        <h1>Welcome to Head & Heart Healing!</h1>
+        <h1>Welcome to Head & Heart Healing</h1>
+        <h3>Your Journey to Wellness Begins Now!</h3>
+
+        <div class="spacer-small"></div>
+
         <p>
             At Head & Heart Healing, we bring a wealth of life experience to our practice, understanding the
             complexities of relationships and personal growth. Our team has navigated various personal challenges,
@@ -65,7 +69,8 @@
     <div class="spacer"></div>
 
     <div class="flex-column card" id="location-area">
-        <h1 class="center">Our Location!</h1>
+        <h1 class="center">Our Location</h1>
+        <h3>Your Safe Space for Growth!</h3>
 
         <div class="spacer-small"></div>
 
@@ -183,6 +188,8 @@
 
 </main>
 
+
+
 <script>
     let slideIndex = 1;
     showSlides(slideIndex);
@@ -216,7 +223,6 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
     }
-
 </script>
 
 <footer id="footer">

@@ -12,16 +12,16 @@ a:hover {
   transform: scale(1.2);
 }
 
-#about-denise {
+#meet-denise {
   display: flex;
   flex-direction: column;
   justify-content: start;
 }
-#about-denise h1, #about-denise h2, #about-denise h3, #about-denise h4, #about-denise h5, #about-denise h6, #about-denise p {
-  line-height: 0.95;
+#meet-denise h1, #meet-denise h2, #meet-denise h3, #meet-denise h4, #meet-denise h5, #meet-denise h6, #meet-denise p {
+  line-height: 1.5;
 }
 
-#about-denise-content {
+#meet-denise-content {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -36,6 +36,9 @@ a:hover {
   min-width: 350px;
 }
 
+#button-wrapper {
+  margin-top: 2em;
+}
 #button-wrapper a {
   color: #f07a60;
   text-decoration: none;
@@ -45,8 +48,16 @@ a:hover {
   font-family: "Amatic Text", sans-serif;
   font-size: 1.7rem;
   font-weight: 700;
-  background-color: rgb(39, 35, 94);
+  background-color: #B38EC1;
   border: 3px solid #f07a60;
+}
+#call-button a {
+  font-size: 1.7rem;
+  color: black;
+}
+
+#call-button:hover {
+  background-color: #cda5dc;
 }
 
 cite {
@@ -58,6 +69,9 @@ cite {
   font-size: 1.7rem;
   font-weight: 700;
   border: 3px solid #f07a60;
+}
+#read-button a {
+  font-size: 1.7rem;
 }
 
 body, html {
@@ -163,6 +177,7 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6, p {
   color: white;
+  margin-bottom: 0;
 }
 
 .hero {
@@ -232,7 +247,7 @@ textarea:focus {
 }
 .location img {
   object-fit: none;
-  max-width: 600px;
+  max-width: 800px;
 }
 .location h4 {
   font-size: 1.5rem;
@@ -270,6 +285,14 @@ nav li {
   text-shadow: 2px 2px 4px black;
 }
 
+#nav-call-button a {
+  font-family: "Amatic Text", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  background-color: orange;
+  border: 3px solid #f07a60;
+}
+
 .overlay-content {
   position: absolute;
   top: 50%;
@@ -302,6 +325,11 @@ nav li {
   transform: scale(1.1);
 }
 
+.shake {
+  animation: shaking 0.25s;
+  animation-delay: 5s;
+}
+
 #small-logo {
   display: none;
 }
@@ -316,14 +344,34 @@ nav li {
 
 #testimonials {
   background-color: black;
+  border-radius: 1rem;
+  padding: 1rem;
+  outline: 30px double black;
 }
 
 ul li {
   list-style-type: circle;
 }
 
+@keyframes shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 @media (min-width: 1000px) {
-  #about-denise {
+  #meet-denise {
     flex-direction: row;
     outline: 0;
   }
