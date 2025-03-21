@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-<!--    <link rel="stylesheet" href="assets/css/pico-copy.css"/>-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <!--    <link rel="stylesheet" href="assets/css/pico-copy.css"/>-->
     <link rel="stylesheet" href="assets/css/hhh.css">
     <link rel="stylesheet" href="assets/css/slideshow.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
     <title>About Us - Head & Heart Healing, PLLC.</title>
 </head>
 <body>
@@ -16,18 +17,17 @@
     <header id="header">
         <div id="logo-wrapper">
             <a href="index.html"><img src="assets/img/hhh_logo.jpeg" alt="logo" id="logo"/></a>
-            <a href="index.html"><img src="assets/img/hhh_heart_logo.jpg" alt="small-logo" id="small-logo"/></a>
         </div>
 
         <nav>
             <ul>
-                <li><a href="about.html">About</a></li>
+                <li><a class="active-link" href="about.html">About</a></li>
                 <li class="center"><a href="denise.html">Meet<br>Denise</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li>
-                    <button class="primary" id="nav-call-button"><a href="tel:+8593409410">Call Now!</a></button>
+                    <button class="primary" id="nav-call-button"><a href="tel:+5025179511">Call Now!</a></button>
                 </li>
             </ul>
         </nav>
@@ -35,8 +35,17 @@
 
     <hr>
 
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="about.html">About</a>
+        <a href="denise.html">Meet Denise</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+    </div>
+
     <div class="spacer-small"></div>
 
+    <button class="openbtn sticky mobile" onclick="openNav()">&#9776; Nav</button>
 
     <div class="container card center" id="more-about">
         <h1>Welcome to Head & Heart Healing</h1>
@@ -189,7 +198,6 @@
 </main>
 
 
-
 <script>
     let slideIndex = 1;
     showSlides(slideIndex);
@@ -223,7 +231,20 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
     }
+
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
 </script>
+
 
 <footer id="footer">
     <span>&copy 2025 Head & Heart Healing PLLC.</span>

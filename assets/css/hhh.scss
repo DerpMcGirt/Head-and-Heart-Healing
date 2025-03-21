@@ -20,23 +20,8 @@ a:hover {
 }
 
 
-#meet-denise {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-
-
-  h1, h2, h3, h4, h5, h6, p {
-    line-height: 1.5;
-  }
-}
-
-#meet-denise-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  padding-left: 2rem;
+.active-link {
+  border-bottom: 10px dotted $orange;
 }
 
 
@@ -62,7 +47,7 @@ a:hover {
   font-size: 1.7rem;
   font-weight: 700;
   background-color: #B38EC1;
-  border: 3px solid $orange;
+  border: 5px solid $orange;
 
   a {
     font-size: 1.7rem;
@@ -82,7 +67,7 @@ cite {
   font-family: "Amatic Text", sans-serif;
   font-size: 1.7rem;
   font-weight: 700;
-  border: 3px solid $orange;
+  border: 5px solid $orange;
 
   a {
     font-size: 1.7rem;
@@ -95,7 +80,6 @@ body, html {
   padding: 0;
   height: 100%;
   justify-content: center;
-  //align-content: center;
 }
 
 
@@ -195,8 +179,6 @@ header {
     -webkit-text-stroke: 2px black;
     font: 2.75rem "Changa Text";
   }
-
-
 }
 
 a {
@@ -310,6 +292,31 @@ textarea:focus {
   }
 }
 
+
+#meet-denise {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+
+  h1, h2, h3, h4, h5, h6, p {
+    line-height: 1.5;
+  }
+}
+
+#meet-denise-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding-left: 2rem;
+}
+
+.mobile {
+  display: none;
+}
+
+
 nav {
   display: flex;
   flex-direction: row;
@@ -326,9 +333,9 @@ nav {
 #nav-call-button {
   a {
     font-family: "Amatic Text", sans-serif;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    background-color: orange;
+    background-color: #fbfb7c;
     border: 3px solid $orange;
   }
 }
@@ -368,11 +375,6 @@ nav {
   transform: scale(1.1);
 }
 
-.shake {
-  animation: shaking .25s;
-  animation-delay: 5s;
-}
-
 
 #small-logo {
   display: none; // default to hidden
@@ -387,6 +389,13 @@ nav {
   height: 4rem;
 }
 
+.sticky {
+  position: fixed;
+  top: 200px;
+  right: 0;
+
+}
+
 #testimonials {
   background-color: black;
   border-radius: 1rem;
@@ -397,25 +406,6 @@ nav {
 ul {
   li {
     list-style-type: circle;
-  }
-}
-
-
-@keyframes shaking {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(5deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }
 
@@ -455,22 +445,13 @@ ul {
   }
 
 
-  #logo {
-    display: none; // hide on smaller screens
-  }
+  //#logo {
+  //  display: none; // hide on smaller screens
+  //}
 
 
   li {
     margin-left: 1rem;
-  }
-
-  #small-logo {
-    display: block; // show on smaller screens
-    min-width: 75px;
-    max-width: 75px;
-    //border: 10px dotted $primary;
-    border-radius: 1rem;
-    margin: 1em;
   }
 }
 
@@ -533,9 +514,21 @@ ul {
     float: right;
   }
 
+  p.indented {
+    padding: 0;
+  }
+
+  .indented-li {
+    margin-left: 0;
+  }
+
   #index-hero {
     width: 100%;
     display: none;
+  }
+
+  .mobile {
+    display: block;
   }
 
   #more {
@@ -571,6 +564,10 @@ ul {
 
   .spacer-small {
     height: 2rem;
+  }
+
+  #specialty-box {
+    padding: 0;
   }
 
   #testimonials {

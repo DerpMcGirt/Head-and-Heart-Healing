@@ -6,72 +6,98 @@
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="assets/css/pico-copy.css"/>
     <link rel="stylesheet" href="assets/css/hhh.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
     <title>Meet Denise - Head & Heart Healing, PLLC</title>
 </head>
 <body>
 
-    <main>
-        <header id="header">
-            <div id="logo-wrapper">
-                <a href="index.html"><img src="assets/img/hhh_logo.jpeg" alt="logo" id="logo"/></a>
-                <a href="index.html"><img src="assets/img/hhh_heart_logo.jpg" alt="small-logo" id="small-logo"/></a>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li class="center"><a href="denise.html">Meet<br>Denise</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li>
-                        <button class="primary" id="nav-call-button"><a href="tel:+8593409410">Call Now!</a></button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <hr>
-
-        <div class="spacer-small"></div>
-
-        <div class="container card" id="meet-denise">
-            <img src="assets/img/denise_profile.jpg" alt="Therapist Denise Myers" id="denise-img"/>
-            <div id="meet-denise-content">
-                <h1 class="indented">Healing Begins Here!</h1>
-                <h2 style="font-family: 'Playfair Text', sans-serif" class="indented">Meet Denise:</h2>
-                <h3 class="indented">Founder of Head & Heart Healing, PLLC.</h3>
-
-                <br>
-
-                <h3 class="indented">License Information:</h3>
-                <h5 class="indented"><strong>North Carolina LCMHC - #20097</strong></h5>
-                <h6 class="indented" style="margin-left: 1em;">Licensed Clinical Mental Health Counselor</h6>
-                <h5 class="indented"><strong>Kentucky LPCC - #286562</strong></h5>
-                <h6 class="indented" style="margin-left: 25px;">Licensed Professional Clinical Counselor</h6>
-
-                <div class="spacer-small"></div>
-
-                <h5>Please feel free to verify license information at the links below!</h5>
-                <a href="https://portal.ncblcmhc.org/Verification/search.aspx">North Carolina Board of Licensed Clinical
-                    Mental Health Counselors</a>
-                <a href="https://oop.ky.gov/">Kentucky Department of Professional Licensing</a>
-
-                <br>
-
-                <a href="https://www.psychologytoday.com/us/therapists/denise-r-myers-greensboro-nc/905779">
-                    <img src="assets/img/psychology_today_min.jpg" alt="Psychology Today Banner" class="banner"/>
-                </a>
-
-                <img src="assets/img/aca.jpg" alt="American Counseling Association Banner" class="banner"/>
-            </div>
+<main>
+    <header id="header">
+        <div id="logo-wrapper">
+            <a href="index.html"><img src="assets/img/hhh_logo.jpeg" alt="logo" id="logo"/></a>
+            <a href="index.html"><img src="assets/img/hhh_heart_logo.jpg" alt="small-logo" id="small-logo"/></a>
         </div>
 
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li class="center"><a class="active-link" href="denise.html">Meet<br>Denise</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li>
+                    <button class="primary" id="nav-call-button"><a href="tel:+5025179511">Call Now!</a></button>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-    </main>
+    <hr>
 
-</body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="about.html">About</a>
+        <a href="denise.html">Meet Denise</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+    </div>
+
+    <div class="spacer-small"></div>
+
+    <button class="openbtn sticky mobile" onclick="openNav()">&#9776; Nav</button>
+
+    <div class="container card" id="meet-denise">
+        <img src="assets/img/denise_profile.jpg" alt="Therapist Denise Myers" id="denise-img"/>
+        <div id="meet-denise-content">
+            <h1 class="indented">Healing Begins Here!</h1>
+            <h2 style="font-family: 'Playfair Text', sans-serif" class="indented">Meet Denise:</h2>
+            <h3 class="indented">Founder of Head & Heart Healing, PLLC.</h3>
+
+            <br>
+
+            <h3 class="indented">License Information:</h3>
+            <h5 class="indented"><strong>North Carolina LCMHC - #20097</strong></h5>
+            <h6 class="indented" style="margin-left: 1em;">Licensed Clinical Mental Health Counselor</h6>
+            <h5 class="indented"><strong>Kentucky LPCC - #286562</strong></h5>
+            <h6 class="indented" style="margin-left: 25px;">Licensed Professional Clinical Counselor</h6>
+
+            <div class="spacer-small"></div>
+
+            <h5>Please feel free to verify license information at the links below!</h5>
+            <a href="https://portal.ncblcmhc.org/Verification/search.aspx">North Carolina Board of Licensed Clinical
+                Mental Health Counselors</a>
+            <a href="https://oop.ky.gov/">Kentucky Department of Professional Licensing</a>
+
+            <br>
+
+            <a href="https://www.psychologytoday.com/us/therapists/denise-r-myers-greensboro-nc/905779">
+                <img src="assets/img/psychology_today_min.jpg" alt="Psychology Today Banner" class="banner"/>
+            </a>
+
+            <img src="assets/img/aca.jpg" alt="American Counseling Association Banner" class="banner"/>
+        </div>
+    </div>
+
+
+</main>
+
 <footer id="footer">
     <span>&copy 2025 Head & Heart Health PLLC.</span>
 </footer>
+
+<script>
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+
+</body>
 </html>

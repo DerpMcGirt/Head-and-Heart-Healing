@@ -12,21 +12,8 @@ a:hover {
   transform: scale(1.2);
 }
 
-#meet-denise {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-}
-#meet-denise h1, #meet-denise h2, #meet-denise h3, #meet-denise h4, #meet-denise h5, #meet-denise h6, #meet-denise p {
-  line-height: 1.5;
-}
-
-#meet-denise-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  padding-left: 2rem;
+.active-link {
+  border-bottom: 10px dotted #f07a60;
 }
 
 .banner {
@@ -49,7 +36,7 @@ a:hover {
   font-size: 1.7rem;
   font-weight: 700;
   background-color: #B38EC1;
-  border: 3px solid #f07a60;
+  border: 5px solid #f07a60;
 }
 #call-button a {
   font-size: 1.7rem;
@@ -68,7 +55,7 @@ cite {
   font-family: "Amatic Text", sans-serif;
   font-size: 1.7rem;
   font-weight: 700;
-  border: 3px solid #f07a60;
+  border: 5px solid #f07a60;
 }
 #read-button a {
   font-size: 1.7rem;
@@ -273,6 +260,27 @@ textarea:focus {
   font-family: "Poppins Text", sans-serif;
 }
 
+#meet-denise {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+#meet-denise h1, #meet-denise h2, #meet-denise h3, #meet-denise h4, #meet-denise h5, #meet-denise h6, #meet-denise p {
+  line-height: 1.5;
+}
+
+#meet-denise-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding-left: 2rem;
+}
+
+.mobile {
+  display: none;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -287,9 +295,9 @@ nav li {
 
 #nav-call-button a {
   font-family: "Amatic Text", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  background-color: orange;
+  background-color: #fbfb7c;
   border: 3px solid #f07a60;
 }
 
@@ -325,11 +333,6 @@ nav li {
   transform: scale(1.1);
 }
 
-.shake {
-  animation: shaking 0.25s;
-  animation-delay: 5s;
-}
-
 #small-logo {
   display: none;
 }
@@ -340,6 +343,12 @@ nav li {
 
 .spacer-small {
   height: 4rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 200px;
+  right: 0;
 }
 
 #testimonials {
@@ -353,23 +362,6 @@ ul li {
   list-style-type: circle;
 }
 
-@keyframes shaking {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(5deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 @media (min-width: 1000px) {
   #meet-denise {
     flex-direction: row;
@@ -396,18 +388,8 @@ ul li {
     align-items: center;
     text-align: center;
   }
-  #logo {
-    display: none;
-  }
   li {
     margin-left: 1rem;
-  }
-  #small-logo {
-    display: block;
-    min-width: 75px;
-    max-width: 75px;
-    border-radius: 1rem;
-    margin: 1em;
   }
 }
 @media screen and (max-width: 600px) {
@@ -457,9 +439,18 @@ ul li {
     display: block;
     float: right;
   }
+  p.indented {
+    padding: 0;
+  }
+  .indented-li {
+    margin-left: 0;
+  }
   #index-hero {
     width: 100%;
     display: none;
+  }
+  .mobile {
+    display: block;
   }
   #more h1 {
     margin-bottom: 3rem;
@@ -486,6 +477,9 @@ ul li {
   }
   .spacer-small {
     height: 2rem;
+  }
+  #specialty-box {
+    padding: 0;
   }
   #testimonials {
     flex-direction: column;
