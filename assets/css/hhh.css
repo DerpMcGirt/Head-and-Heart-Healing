@@ -23,6 +23,13 @@ a:hover {
   min-width: 350px;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  justify-content: center;
+}
+
 #button-wrapper {
   margin-top: 2em;
 }
@@ -51,21 +58,8 @@ cite {
   color: #f07a60;
 }
 
-#read-button {
-  font-family: "Amatic Text", sans-serif;
-  font-size: 1.7rem;
-  font-weight: 700;
-  border: 5px solid #f07a60;
-}
-#read-button a {
-  font-size: 1.7rem;
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  justify-content: center;
+#happiness-img {
+  filter: brightness(0.9);
 }
 
 .card {
@@ -82,6 +76,7 @@ body, html {
 .card h1 {
   font-family: "Playfair Text", sans-serif;
   padding-bottom: 1rem;
+  font-size: 3em;
 }
 .card h3, .card h4, .card p {
   font-family: "Patrick Text", sans-serif;
@@ -125,7 +120,15 @@ body, html {
   font-family: "playfair Text", sans-serif;
   font-weight: 500;
   font-size: 1.2rem;
-  background-color: rebeccapurple;
+  background-color: black;
+  height: 15%;
+  padding-left: 1em;
+}
+
+#footer-details {
+  float: right;
+  align-items: end;
+  padding-right: 2em;
 }
 
 #greeting {
@@ -138,6 +141,12 @@ body, html {
   border-radius: 50px;
   box-shadow: -2px 2px 15px darkorchid;
   background-color: #f4eafc;
+}
+
+#happiness-img {
+  border-radius: 50%;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 header {
@@ -294,11 +303,15 @@ nav li {
 }
 
 #nav-call-button a {
-  font-family: "Amatic Text", sans-serif;
+  font-family: sans-serif, Serif;
   font-size: 1.5rem;
   font-weight: 500;
-  background-color: #fbfb7c;
-  border: 3px solid #f07a60;
+  background-color: #0172AD;
+  border: 3px solid black;
+  -webkit-text-stroke: 0 white;
+}
+#nav-call-button a:hover {
+  background-color: #2e86b4;
 }
 
 .overlay-content {
@@ -331,6 +344,16 @@ nav li {
 
 #physical-address:hover {
   transform: scale(1.1);
+}
+
+#read-button {
+  font-family: "Amatic Text", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  border: 5px solid #f07a60;
+}
+#read-button a {
+  font-size: 1.7rem;
 }
 
 #small-logo {

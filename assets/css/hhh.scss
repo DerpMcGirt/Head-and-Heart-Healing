@@ -33,6 +33,15 @@ a:hover {
 }
 
 
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  justify-content: center;
+}
+
+
 #button-wrapper {
   margin-top: 2em;
 
@@ -63,24 +72,11 @@ cite {
   color: $orange;
 }
 
-#read-button {
-  font-family: "Amatic Text", sans-serif;
-  font-size: 1.7rem;
-  font-weight: 700;
-  border: 5px solid $orange;
 
-  a {
-    font-size: 1.7rem;
-  }
+#happiness-img {
+  filter: brightness(0.9);
 }
 
-
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  justify-content: center;
-}
 
 
 .card {
@@ -98,6 +94,7 @@ body, html {
   h1 {
     font-family: "Playfair Text", sans-serif;
     padding-bottom: 1rem;
+    font-size: 3em;
   }
 
   h3, h4, p {
@@ -150,7 +147,15 @@ body, html {
   font-family: "playfair Text", sans-serif;
   font-weight: 500;
   font-size: 1.2rem;
-  background-color: rebeccapurple;
+  background-color: black;
+  height: 15%;
+  padding-left: 1em;
+}
+
+#footer-details {
+  float: right;
+  align-items: end;
+  padding-right: 2em;
 }
 
 
@@ -164,6 +169,13 @@ body, html {
   border-radius: 50px;
   box-shadow: -2px 2px 15px darkorchid;
   background-color: #f4eafc;
+}
+
+
+#happiness-img {
+  border-radius: 50%;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 
@@ -332,13 +344,20 @@ nav {
 
 #nav-call-button {
   a {
-    font-family: "Amatic Text", sans-serif;
+    font-family: sans-serif,Serif;
     font-size: 1.5rem;
     font-weight: 500;
-    background-color: #fbfb7c;
-    border: 3px solid $orange;
+    background-color: #0172AD;
+    border: 3px solid black;
+    -webkit-text-stroke: 0 white;
+  }
+
+  a:hover {
+    background-color: #2e86b4;
   }
 }
+
+
 
 .overlay-content {
   position: absolute;
@@ -373,6 +392,17 @@ nav {
 
 #physical-address:hover {
   transform: scale(1.1);
+}
+
+#read-button {
+  font-family: "Amatic Text", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  border: 5px solid $orange;
+
+  a {
+    font-size: 1.7rem;
+  }
 }
 
 

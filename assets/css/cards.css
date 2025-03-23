@@ -1,0 +1,115 @@
+
+
+#dissociation-card-img {
+    background-image: url("/assets/img/dissociate.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+    filter: brightness(0.9);
+}
+
+
+
+#life-changes-card-img {
+    background-image: url("/assets/img/graduation.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+    filter: brightness(0.9);
+}
+
+
+#lgbt-card-img {
+    background-image: url("/assets/img/lgbtq_rainbow.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+    filter: brightness(0.8);
+}
+
+
+#relationships-card-img {
+    background-image: url("/assets/img/relationships2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+    filter: brightness(0.8);
+}
+
+
+.specialty-card {
+    max-width: 60%;
+    margin: auto;
+    box-sizing: content-box;
+
+    display: flex;
+    flex-direction: row;
+    border-radius: 1em;
+    background-image: radial-gradient(circle, #27235e, #2a1b56, #2d134d, #2e0944, #2e003b);
+    box-shadow: 2px 2px 15px black;
+    text-shadow: 2px 2px 5px black;
+    border: 15px solid #f07a60;
+}
+
+.specialty-card-content {
+    max-width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    margin: 0 auto;
+}
+
+.specialty-card-img {
+    width: 60%;
+    height: auto;
+    background-size: cover;
+}
+
+.specialty-card-content p {
+    font-family: sans-serif,serif;
+}
+
+.specialty-card-title {
+    font-family: "Playfair Text", sans-serif;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+
+#spirituality-card-img {
+    background-image: url("/assets/img/clouds.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+    filter: brightness(0.9);
+    float: right;
+}
+
+
+#trauma-card-img {
+    background-image: url("/assets/img/trauma_soldier.jpg");
+    background-repeat: no-repeat;
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+    filter: brightness(0.8);
+}
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .specialty-card {
+        display: flex;
+        flex-direction: column;
+
+        width: 90%;
+    }
+}

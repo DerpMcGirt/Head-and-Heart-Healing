@@ -84,4 +84,8 @@
         padding: 10px 15px;
         border: none;
     }
+
+    .nav-icons {
+        width: 35px;
+    }
 }
